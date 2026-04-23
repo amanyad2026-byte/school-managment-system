@@ -2,52 +2,130 @@
 <html>
 <head>
 <title>School Form</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+background-color: gold;
+text-align: center;
+font-family: Arial;
+margin: 0;
+}
+
+/* Heading Box */
+.header{
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: lightyellow;
+padding: 15px;
+border-bottom: 3px solid black;
+}
+
+/* Logo */
+.logo{
+width: 70px;
+height: 70px;
+margin-right: 15px;
+}
+
+/* School Name */
+.school-name{
+font-size: 30px;
+font-weight: bold;
+color: darkblue;
+}
+
+/* Button Style */
+.btn{
+background-color: blue;
+color: white;
+padding: 12px 25px;
+text-decoration: none;
+border-radius: 8px;
+font-size: 18px;
+display: inline-block;
+margin: 10px;
+}
+
+.btn:hover{
+background-color: darkblue;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h2>Student Entry Form</h2>
+<!-- Heading + Logo -->
+<div class="header">
+<img src="images.jfif" class="logo">
+<div class="school-name">S.B PUBLIC SCHOOL CHHITAUNA</div>
+</div>
 
-<a href="https://docs.google.com/forms/d/1W4fBWpkIw42ikVTeFl6wIksAj3H6ZKhKiZBJ8C4b3o4/preview" class="btn">admission form</a>
+<br><br>
+
+<h2>aman yadav</h2>
+<br>
+<div class="slider">
+  <img class="slide" src="images.jfif">
+  <img class="slide" src="photo2.jpg">
+  <img class="slide" src="photo3.jpg">
+  <img class="slide" src="photo4.jpg">
+</div>
 
 <style>
-.btn{
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+.slider{
+width:600px;
+height:300px;
+margin:auto;
+overflow:hidden;
+}
+
+.slide{
+width:600px;
+height:300px;
+display:none;
 }
 </style>
 
-<a href="https://docs.google.com/forms/d/1KDGnNbjPwZ6wH9oT3waReguycSxdLu3DRT-Yy5dKwEU/preview" class="btn">add teacher</a>
+<script>
 
-<style>
-.btn{
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+let index = 0;
+showSlides();
+
+function showSlides() {
+let slides = document.getElementsByClassName("slide");
+
+for (let i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
 }
-</style>
 
-<a href="https://docs.google.com/forms/d/1QlL8YyMnUsqXSyA9RXoUKKrLTbMbSCUChuOeM5M6ZFk/preview" class="btn">add marks</a>
+index++;
 
-<style>
-.btn{
-  background-color: blue;
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 16px;
+if (index > slides.length) {
+index = 1;
 }
-</style>
 
+slides[index-1].style.display = "block";
+
+setTimeout(showSlides,2000); 
+}
+
+</script>
+
+<a href="https://docs.google.com/forms/d/1W4fBWpkIw42ikVTeFl6wIksAj3H6ZKhKiZBJ8C4b3o4/preview" class="btn">Admission Form</a>
+
+<br>
+
+<a href="https://docs.google.com/forms/d/1KDGnNbjPwZ6wH9oT3waReguycSxdLu3DRT-Yy5dKwEU/preview" class="btn">Add Teacher</a>
+
+<left>
+
+<a href="https://docs.google.com/forms/d/1QlL8YyMnUsqXSyA9RXoUKKrLTbMbSCUChuOeM5M6ZFk/preview" class="btn">Add Marks</a>
 
 </body>
 </html>
+
+<
